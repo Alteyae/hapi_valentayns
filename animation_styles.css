@@ -1,10 +1,13 @@
 /* CSS styles for animation.html */
+
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: center;
 }
+
 
 svg #line {
     fill: none;
@@ -46,10 +49,4 @@ svg #point {
     100% {
         stroke-dashoffset: 0;
     }
-}
-
-.transition-effect {
-    opacity: 0;
-    transition: opacity 12s ease-out;
-    /* Adjust the transition duration and timing function as needed */
 }

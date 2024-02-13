@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animation</title>
+    <title>heart</title>
     <link rel="stylesheet" href="animation_styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
+    <div class="svg-container">
     <svg xmlns="http://www.w3.org/2000/svg" id="svg5" version="1.1" viewBox="-5 -5 278 56">
         <filter id="blur">
             <feGaussianBlur stdDeviation="1.6" />
@@ -24,8 +27,23 @@
                 pathLength="1" />
         </g>
     </svg>
+    <div class="button-container">
+        <button id="messageButton" type="button" class="btn btn-outline-danger" onclick="showMessage()">You have a message</button>
+    </div>
+    </div>
+   
+ 
+    <script>
+        function showMessage() {
+            document.getElementById('messageButton').style.display = 'none';
+            window.location.href = "bb.html";
+        }
 
-    <script src="script.js"></script>
+        setTimeout(function () {
+            document.getElementById('messageButton').style.display = 'block';
+            document.getElementById('svg5').classList.remove('animation');
+        }, 10000);
+    </script>
 </body>
 
 </html>
