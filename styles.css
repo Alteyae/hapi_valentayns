@@ -1,0 +1,111 @@
+html,
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(bg-hearts.jpg), linear-gradient(33deg, #2c303a, #2c303a);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+
+.envelope {
+    content: url(envelope.png);
+    position: absolute;
+    filter: drop-shadow(1.5px 0.75px 1.75px #4d4d4d);
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 550px;
+    box-shadow: inset 5px 0px 15px 0px rgba(0, 0, 0, 0.1), 3px 0px 3px -2px rgba(0, 0, 0, 0.3);
+    background-color: #fffffa;
+    transform: scale(1.05);
+    left: -25px;
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -10px 0px 0px -10px;
+    margin: auto;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform-origin: 0% 50%;
+    transform: perspective(800px) rotateY(0deg);
+    transition: all 1s ease-in-out;
+}
+
+.front {
+    border: 1px solid #e0e0db;
+    background-color: #e8e6e3;
+    background-size: contain;
+    filter: saturate(1.125) brightness(1.0125);
+}
+
+.back {
+    backface-visibility: visible;
+    box-shadow: inset 5px 0px 15px 0px rgba(0, 0, 0, 0.1), 3px 0px 3px 1px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+}
+
+.card:hover .front,
+.card:hover .back {
+    transform: perspective(800px) rotateY(-170deg);
+}
+
+.text-container {
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #929292;
+}
+
+.text-container p {
+    font-family: "Alata", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+}
+
+
+.f-box {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: transparent;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.f-box img {
+    margin-top: 0px;
+    height: 100%;
+    width: auto;
+}
+
+@media (max-width: 675px) {
+    .envelope {
+        width: 380px;
+    }
+
+    .card {
+        height: 450px;
+        width: 230px;
+    }
+}
+
