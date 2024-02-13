@@ -109,3 +109,27 @@ body {
     }
 }
 
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: 230px;
+        /* Adjust as needed for smaller screens */
+        height: 300px;
+        /* Adjust as needed for smaller screens */
+        left: 5px;
+    }
+
+    .text-container {
+        width: 90%;
+        height: 100%;
+
+        /* Adjust as needed for smaller screens */
+    }
+
+   .text-container p {
+       font-family: "Alata", sans-serif;
+       font-style: normal;
+       font-size: 75%;
+   }
+}
